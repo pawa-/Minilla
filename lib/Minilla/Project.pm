@@ -407,7 +407,7 @@ sub cpan_meta {
             "url"     => "http://search.cpan.org/perldoc?CPAN::Meta::Spec"
         },
         license        => [ $self->license->meta2_name ],
-        abstract       => $self->abstract,
+        abstract       => decode_utf8($self->abstract),
         dynamic_config => 0,
         version        => $self->version,
         name           => $self->dist_name,
